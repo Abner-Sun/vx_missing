@@ -10,7 +10,13 @@ _C_LIB_DECL
 _TYPE_size_t;
 #endif
 
-#ifndef __clock_t
+/*sfh add , in May 26, 2014,9:55:34
+#ifndef __clock_t*/
+#if !defined(_CLOCK_T) && !defined(__clock_t)&& !defined(__clock_t_defined)
+#define _CLOCK_T
+#define __clock_t_defined
+//sfh add end .
+
 #define	__clock_t
 typedef size_t clock_t;
 #endif
