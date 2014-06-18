@@ -1,3 +1,4 @@
+//sfh copied this file form '/vx68_mysql/WindRiver68./diab/5.8.0.0/include/sys/times.h ' in May 27, 2014,8:41:4
 #ifndef __Itimes
 #define __Itimes
 
@@ -28,7 +29,17 @@ struct tms {
 	clock_t	tms_cstime;
 };
 
+//sfh add in May 30, 2014,15:54:45
+//struct timeval
+//    {
+//    long tv_sec;	/* seconds */
+//    long tv_usec;	/* microseconds */
+//   }; 
+//sfh add end 
 extern clock_t times(struct tms *);
+
+
+
 
 _END_C_LIB_DECL
 
